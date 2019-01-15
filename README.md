@@ -45,7 +45,7 @@ TM1 Syntax Highlighting and Snippets exension is a set of syntax highlighting fi
 
 # Features
 
-## <a id="syntax-highlighting">Syntax Highlighting</a>
+## <a name="syntax-highlighting" id="syntax-highlighting">Syntax Highlighting</a>
 
 Syntax highlighting is available on rules and Turbo Integrator processes
 
@@ -57,7 +57,7 @@ Syntax highlighting is available on rules and Turbo Integrator processes
 ![Syntax Highlighting](about/images/syntax-highlighting-process.png)
 
 
-## <a id="code-completion">Code Completion</a>
+## <a name="code-completion" id="code-completion">Code Completion</a>
 
 Start typing any part of a standard TM1 function and the list of matching commands along with their parameters will be displayed
 
@@ -65,21 +65,21 @@ Start typing any part of a standard TM1 function and the list of matching comman
 
 
 
-## <a id="code-snippets">Turbo Integrator Code Snippets</a>
+## <a name="code-snippets" id="code-snippets">Turbo Integrator Code Snippets</a>
 
 Snippets provided with this extension begin with the letter x.   Press x to see the list of code snippets available, and select the desired entry.   The code will be automatically inserted into VSCode and can be completed by pressing `TAB` through the frequently changed parameters.
 
 ![Code Snippets](about/images/code-snippets.gif)
 
 
-## <a id="mdx-query-building">MDX Query Building</a>
+## <a name="mdx-query-building" id="mdx-query-building">MDX Query Building</a>
 
 There are two types of MDX snippets; MDX Expressions (mdx) and MDX Queries (mdq).   Using the `mdx` and `mdq` snippet prefixes, you can generate complex MDX queries from basic building blocks.
 
 ![MDX Query Building](about/images/mdx-query-building.gif)
 
 
-## <a id="standardized-conventions">Standardized Conventions</a>
+## <a name="standardized-conventions" id="standardized-conventions">Standardized Conventions</a>
 
 ### Variable Naming
 All variable names are consistent throughout rules and Turbo Integrator functions and code blocks.   The following naming convensions for variables are used: 
