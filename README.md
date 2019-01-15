@@ -2,7 +2,7 @@
 
 ![CarpeDatum](about/images/logo.jpg)
 
-TM1 Syntax Highlighting and Snippets exension is a set of syntax highlighting files, code completions and snippets for developing rules and Turbo Integrator processes in IBM Planning Analytics/IBM Cognos TM1 server either local or on the IBM Cloud.
+TM1 Syntax Highlighting and Snippets extension is a set of syntax highlighting files, code completions and snippets for developing rules and Turbo Integrator processes in IBM Planning Analytics/IBM Cognos TM1 server either local or on the IBM Cloud.
 
 
 ### About CarpeDatum
@@ -82,7 +82,7 @@ There are two types of MDX snippets; MDX Expressions (mdx) and MDX Queries (mdq)
 ## <a name="standardized-conventions" id="standardized-conventions">Standardized Conventions</a>
 
 ### Variable Naming
-All variable names are consistent throughout rules and Turbo Integrator functions and code blocks.   The following naming convensions for variables are used: 
+All variable names are consistent throughout rules and Turbo Integrator functions and code blocks.   The following naming conventions for variables are used: 
 
 * `p = Parameter`: Variables defined on the Parameters tab should be prefixed with a “p”.
 * `v = Variables`: Variables defined on the Variables tab should be prefixed with a “v”.
@@ -123,6 +123,6 @@ TM1 Helper is [MIT Licensed](LICENSE.md)
 We would love to hear from you!   Let us know if you would like to incorporate some new snippets, have some syntax changes or additions, or if you find any errors with the ones included in this extension.
 
 * [Contact Support](mailto:support@CarpeDatumInc.com)
-* [Vist our Website](https://www.CarpeDatumInc.com)
+* [Visit our Website](https://www.CarpeDatumInc.com)
 
 **Enjoy!**
