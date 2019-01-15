@@ -1,6 +1,7 @@
-# TM1 Helper: Syntax Highlighting & Snippets
 
 ![CarpeDatum](about/images/logo.jpg)
+
+# TM1 Helper: Syntax Highlighting & Snippets
 
 TM1 Syntax Highlighting and Snippets extension is a set of syntax highlighting files, code completions and snippets for developing rules and Turbo Integrator processes in IBM Planning Analytics/IBM Cognos TM1 server either local or on the IBM Cloud.
 
