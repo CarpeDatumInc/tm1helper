@@ -31,12 +31,7 @@ TM1 Syntax Highlighting and Snippets exension is a set of syntax highlighting fi
 
 ### Using VSCode
 
-* Search for TM1 in your Visual Studio Code extensions
-
-* Clone this repository into this directory with the command:
-```
-      git clone https://github.com/CarpeDatumInc/vscode-tm1.git tm1
-```
+* Search for TM1 in your Visual Studio Code extensions click `install`
 
 ### Using GIT
 
@@ -101,7 +96,7 @@ Several standardized comment blocks are provided:
 
 CarpeDatum snippets provide code snippets for CarpeDatum customers leveraging our standard script library.   It works much in the same as standard snippets except these are not part of the standard TM1 functions or operations.
 
-You can disable these from the snippet lookup by removing the entry in the package.json file where these are located.
+You can disable these from the snippet lookup by removing the entry in the package.json file or remove the source files where these are located.
 
 ![CarpeDatum Snippets](about/images/carpedatum-snippet-config.png)
 
