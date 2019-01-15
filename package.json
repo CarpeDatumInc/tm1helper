@@ -5,6 +5,7 @@
 	"version": "1.0.0",
 	"publisher": "CarpeDatum",
 	"repository": { "url": "https://github.com/CarpeDatumInc/vscode-tm1.git" },
+	"icon": "about/images/tm1-helper-icon.png",
 	"engines": {
 		"vscode": "^1.19.0"
 	},
