@@ -1,4 +1,4 @@
-# TM1 Code: Syntax Highlighting & Snippets
+# TM1 Helper: Syntax Highlighting & Snippets
 
 ![CarpeDatum](about/images/logo.jpg)
 
