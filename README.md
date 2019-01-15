@@ -18,13 +18,14 @@ TM1 Syntax Highlighting and Snippets exension is a set of syntax highlighting fi
 * `Syntax Highlighting` for all rules and process functions to allow for faster readability
 * `Code Completion` to assist with parameter usage in the rule and process function calls
 * `TI Snippets` for standard approaches to common operations in a TM1 Turbo Integrator Process, such as subset element looping, datasource parameter setting, etc
+* `MDX Query Building' allows you to quickly generate complex MDX from building blocks of MDX statements.
 * `Standardized Convensions` are used for all variables, parameters, and code blocks that allow for consistency in code usage and readability
 * `CarpeDatum Snippets` are included in this repository for those customers using CarpeDatum's Turbo Integrator script library
 * `Custom Snippets` can be added for personalized and frequently used snippets for rules and TI processes
 
 >NOTE: The snippets and code completion includes syntax and functional capabilities up to version 2.0.6 (such as hierarchies, temporary views, etc).  Some commands and code snippets may not be available on older versions of TM1.
 
->**IMPORTANT**: IBM Planning Analytics/Cognos TM1 does allow for direct editing of the .RUX and .PRO files.   All editing must be done by copying the appropriate text from the standard TM1 interfaces and pasted into VSCode.   Editing can take place there, and once changes are completed, pasted back into the standard interface (such as Process Editor or Rules Editor)
+>**IMPORTANT**: IBM Planning Analytics/Cognos TM1 does not allow for direct editing of the .RUX and .PRO files.   All editing must be done by copying the appropriate text from the standard TM1 interfaces and pasted into VSCode.   Editing can take place there, and once changes are completed, pasted back into the standard interface (such as Process Editor or Rules Editor)
 
 
 ## Installation
@@ -71,10 +72,17 @@ Snippets provided with this extension begin with the letter x.   Press x to see 
 ![Code Snippets](about/images/code-snippets.gif)
 
 
+## MDX Query Building
+
+There are two types of MDX snippets; MDX Expressions (mdx) and MDX Queries (mdq).   Using the `mdx` and `mdq` snippet prefixes, you can generate complex MDX queries from basic building blocks.
+
+![MDX Query Building](about/images/mdx-snippets.gif)
+
+
 ## Standardized Conventions
 
 ### Variable Naming
-All variable names are consistent throughout rules and Turbo Integrator functions and code blocks.   The following naming convensions for variables are used:
+All variable names are consistent throughout rules and Turbo Integrator functions and code blocks.   The following naming convensions for variables are used: 
 
 * `p = Parameter`: Variables defined on the Parameters tab should be prefixed with a “p”.
 * `v = Variables`: Variables defined on the Variables tab should be prefixed with a “v”.
