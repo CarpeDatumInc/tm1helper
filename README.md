@@ -15,13 +15,13 @@ TM1 Syntax Highlighting and Snippets exension is a set of syntax highlighting fi
 
 ## Features
 
-* `Syntax Highlighting` for all rules and process functions to allow for faster readability
-* `Code Completion` to assist with parameter usage in the rule and process function calls
-* `TI Snippets` for standard approaches to common operations in a TM1 Turbo Integrator Process, such as subset element looping, datasource parameter setting, etc
-* `MDX Query Building' allows you to quickly generate complex MDX from building blocks of MDX statements.
-* `Standardized Convensions` are used for all variables, parameters, and code blocks that allow for consistency in code usage and readability
-* `CarpeDatum Snippets` are included in this repository for those customers using CarpeDatum's Turbo Integrator script library
-* `Custom Snippets` can be added for personalized and frequently used snippets for rules and TI processes
+* [Syntax Highlighting](#syntax-highlighting) for all rules and process functions to allow for faster readability
+* [Code Completion](#code-completion) to assist with parameter usage in the rule and process function calls
+* [TI Snippets](#code-snippets) for standard approaches to common operations in a TM1 Turbo Integrator Process, such as subset element looping, datasource parameter setting, etc
+* [MDX Query Building](#mdx-query-building) allows you to quickly generate complex MDX from building blocks of MDX statements.
+* [Standardized Conventions](#standardized-conventions) are used for all variables, parameters, and code blocks that allow for consistency in code usage and readability
+* [CarpeDatum Snippets](#cdc-snippets) are included in this repository for those customers using CarpeDatum's Turbo Integrator script library
+* [Custom Snippets](#custom-snippets) can be added for personalized and frequently used snippets for rules and TI processes
 
 >NOTE: The snippets and code completion includes syntax and functional capabilities up to version 2.0.6 (such as hierarchies, temporary views, etc).  Some commands and code snippets may not be available on older versions of TM1.
 
@@ -45,7 +45,7 @@ TM1 Syntax Highlighting and Snippets exension is a set of syntax highlighting fi
 
 # Features
 
-## Syntax Highlighting
+## <a id="syntax-highlighting">Syntax Highlighting</a>
 
 Syntax highlighting is available on rules and Turbo Integrator processes
 
@@ -57,7 +57,7 @@ Syntax highlighting is available on rules and Turbo Integrator processes
 ![Syntax Highlighting](about/images/syntax-highlighting-process.png)
 
 
-## Code Completion
+## <a id="code-completion">Code Completion</a>
 
 Start typing any part of a standard TM1 function and the list of matching commands along with their parameters will be displayed
 
@@ -65,21 +65,21 @@ Start typing any part of a standard TM1 function and the list of matching comman
 
 
 
-## Turbo Integrator Code Snippets
+## <a id="code-snippets">Turbo Integrator Code Snippets</a>
 
 Snippets provided with this extension begin with the letter x.   Press x to see the list of code snippets available, and select the desired entry.   The code will be automatically inserted into VSCode and can be completed by pressing `TAB` through the frequently changed parameters.
 
 ![Code Snippets](about/images/code-snippets.gif)
 
 
-## MDX Query Building
+## <a id="mdx-query-building">MDX Query Building</a>
 
 There are two types of MDX snippets; MDX Expressions (mdx) and MDX Queries (mdq).   Using the `mdx` and `mdq` snippet prefixes, you can generate complex MDX queries from basic building blocks.
 
-![MDX Query Building](about/images/mdx-snippets.gif)
+![MDX Query Building](about/images/mdx-query-building.gif)
 
 
-## Standardized Conventions
+## <a id="standardized-conventions">Standardized Conventions</a>
 
 ### Variable Naming
 All variable names are consistent throughout rules and Turbo Integrator functions and code blocks.   The following naming convensions for variables are used: 
@@ -100,7 +100,7 @@ Several standardized comment blocks are provided:
 * `xMedium Code Block` snippet introduces minor breakouts of a Turbo Integrator or rule block within a major section.
 
 
-## CarpeDatum Snippets
+## <a id="cdc-snippets">CarpeDatum Library Snippets</a>
 
 CarpeDatum snippets provide code snippets for CarpeDatum customers leveraging our standard script library.   It works much in the same as standard snippets except these are not part of the standard TM1 functions or operations.
 
@@ -109,12 +109,15 @@ You can disable these from the snippet lookup by removing the entry in the packa
 ![CarpeDatum Snippets](about/images/carpedatum-snippet-config.png)
 
 
-## Custom Snippets
+## <a id="custom-snippets">Custom Snippets</a>
 
 We have provided a reference for your own custom Turbo Integrator code snippets by simply creating a file named `custom.process.codeblocks.json` in this extensions directory.    
 
 It is recommended that you do not update the `tm1.*` files as they will change with subsequent releases.   Place all of your personal snippets in `custom.*` and these will remain unchanged as you update new releases of this extension.
 
+## License
+
+TM1 Helper is [MIT Licensed](LICENSE.md)
 
 ## Contact us!
 We would love to hear from you!   Let us know if you would like to incorporate some new snippets, have some syntax changes or additions, or if you find any errors with the ones included in this extension.
