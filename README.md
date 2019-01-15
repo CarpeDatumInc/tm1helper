@@ -47,7 +47,7 @@ TM1 Syntax Highlighting and Snippets exension is a set of syntax highlighting fi
       git clone https://github.com/CarpeDatumInc/vscode-tm1.git tm1
 ```
 
-## Features
+# Features
 
 ## Syntax Highlighting
 
@@ -64,6 +64,7 @@ Syntax highlighting is available on rules and Turbo Integrator processes
 ## Code Completion
 
 Start typing any part of a standard TM1 function and the list of matching commands along with their parameters will be displayed
+
 ![Code Completion](about/images/code-completion.gif)
 
 
@@ -71,6 +72,7 @@ Start typing any part of a standard TM1 function and the list of matching comman
 ## Turbo Integrator Code Snippets
 
 Snippets provided with this extension begin with the letter x.   Press x to see the list of code snippets available, and select the desired entry.   The code will be automatically inserted into VSCode and can be completed by pressing `TAB` through the frequently changed parameters.
+
 ![Code Snippets](about/images/code-snippets.gif)
 
 
