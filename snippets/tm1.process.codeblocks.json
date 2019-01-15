@@ -1,0 +1,192 @@
+{
+	"Header": {
+		"prefix": "xHeader",
+		"body": [
+			"#==============================================================================",
+			"#                             ${1:Process Name}",
+			"#",
+			"#  Description:",
+			"#      ${2:Summary description here.}",
+			"#",
+			"#  Parameters:",
+			"#      ${3:pParameterList}",
+			"#",
+			"#  Requirements:",
+			"#      ${4:Describe any requirements necessary for the process to run.}",
+			"#",
+			"#  Calls:",
+			"#      ${5:Processes Called}",
+			"#",
+			"#     Date     WHO  Description",
+			"#  ----------  ---  ----------------------------------------------------",
+			"#  ${6:mm/dd/yyyy}  ${7:ABC}  ${8:Comments.}",
+			"#",
+			"#==============================================================================",
+			"",
+			"#==============================================================================",
+			"#                           CONFIGURATION SECTION",
+			"#==============================================================================",
+			"cProcessName = GetProcessName();",
+			"cTimeStamp = TIMST( NOW, '\\Y-\\m-\\d(\\h\\i\\s)' );",
+			"cViewName = '_tmp_' | cProcessName | '_' | cTimeStamp;",
+			"cSubsetName = cViewName;",
+			"",
+			"sLogPath = '..\\Logs\\';",
+			"sLogFile = sLogPath | cViewName | '.log';",
+			"",
+			"",
+			"#==============================================================================",
+			"#                        PARAMETER VALIDATION SECTION",
+			"#==============================================================================",
+			"",
+			"#==============================================================================",
+			"#                           PROCESS LOGIC SECTION",
+			"#=============================================================================="
+		]
+	},
+
+	"Medium Code Block": {
+		"prefix": "xMedium Code Block",
+		"description": "",
+		"body": [
+			"#--------------------------------------------------------------------------",
+			"# ${1:Your comment here}",
+			"#--------------------------------------------------------------------------"
+		]
+	},
+
+	"Large Code Block Introduction": {
+		"prefix": "xLarge Code Block",
+		"description": "",
+		"body": [
+			"#==============================================================================",
+			"#                           ${1:YOUR COMMENT HERE}",
+			"#=============================================================================="
+		]
+	},
+
+	"Add New Element With Parent": {
+		"prefix": "xAdd New Element With Parent",
+		"description": "Add new element to dimension and only add parent if it doesn't already exist.  (TM1=Master).",
+		"body": [
+			"sDimName = ${1:DimensionName};",
+			"sChildElemID = ${2:ElementID};",
+			"sParentElemID = ${3:ParentElementID};",
+			"If( DIMIX( sDimName, sChildElemID ) = 0 );",
+			"    DimensionElementInsert( sDimName, '', sChildElemID, 'N' );",
+			"    If( DIMIX( sDimName, sParentElemID ) = 0 );",
+			"        DimensionElementInsert( sDimName, '', sParentElemID, 'C' );",
+			"    EndIf;",
+			"    DimensionElementComponentAdd( sDimName, sParentElemID, sChildElemID, 1 );",
+			"EndIf;"
+		]
+	},
+
+	"Add New Element Force Parent": {
+		"prefix": "xAdd New Element Force Parent",
+		"description": "Add new element to dimension and force child to reside under parent.  (DataFile=Master)",
+		"body": [
+			"sDimName = ${1:DimensionName};",
+			"sChildElemID = ${2:ElementID};",
+			"sParentElemID = ${3:ParentElementID};",
+			"If( DIMIX( sDimName, sChildElemID ) = 0 );",
+			"    DimensionElementInsert( sDimName, '', sChildElemID, 'N' );",
+			"EndIf;",
+			"If( DIMIX( sDimName, sParentElemID ) = 0 );",
+			"    DimensionElementInsert( sDimName, '', sParentElemID, 'C' );",
+			"EndIf;",
+			"DimensionElementComponentAdd( sDimName, sParentElemID, sChildElemID, 1 );"
+		]
+	},
+
+	"Loop Dimension Elements": {
+		"prefix": "xLoop Dimension Elements",
+		"description": "Loop through all of the elements within a dimension. (not safe for element deletes)",
+		"body": [
+			"# --- Loop through the elements in the dimension",
+			"sDimName = ${1:DimensionName};",
+			"sParentElemID = ${2:ParentElementID};",
+			"nNumElems = ELCOMPN( sDimName, sParentElemID );",
+			"nElemIndex = 0;",
+			"While( nElemIndex < nNumElems );",
+			"    nElemIndex = nElemIndex + 1;",
+			"    sElemID = ELCOMP( sDimName, sParentElemID, nElemIndex );",
+			"    ",
+			"    ${3:#...code...}",
+			"End;"
+		]
+	},
+
+	"Loop Subset Elements": {
+		"prefix": "xLoop Subset Elements",
+		"description": "Loop through all of the elements within a subset",
+		"body": [
+			"sDimName = ${1:DimensionName};",
+			"sSubsetName = ${2:SubsetName};",
+			"sMDX = '${3:}';",
+			"SubsetCreateByMDX( sSubsetName, sMDX, 1 );",
+			"nSubsetCount = SubsetMDXSet( sDimName, sSubsetName, '' );",
+			"nSubsetIndex = 1;",
+			"WHILE( nSubsetIndex <= nSubsetCount );",
+			"    sSubsetElement = SubsetGetElementName( sDimName, sSubsetName, nSubsetIndex );",
+			"",
+			"    ${4:#...code...}",
+			"",
+			"    nSubsetIndex = nSubsetIndex + 1;",
+			"END;"
+		]
+	},
+
+	"Loop Dimension Elements Reverse": {
+		"prefix": "xLoop Dimension Elements Reverse",
+		"description": "Loop through all of the elements within a dimension in reverse order. (safe for element deletes)",
+		"body": [
+			"# --- Loop through the elements in the dimension",
+			"sDimName = ${1:DimensionName};",
+			"sParentElemID = ${2:ParentElementID};",
+			"nNumElems = ELCOMPN( sDimName, sParentElemID );",
+			"While( nNumElems > 0 );",
+			"    sElemID = ELCOMP( sDimName, sParentElemID, nNumElems );",
+			"    ",
+			"    ${3:#...code...}",
+			"    ",
+			"    nNumElems = nNumElems - 1;",
+			"End;"
+		]
+	},
+
+	"Set TextFile Datasource": {
+		"prefix": "xSet TextFile Datasource",
+		"description": "Set a Text File as a process data source",
+		"body": [
+			"# --- Set the Data Source",
+			"DataSourceType = 'CharacterDelimited';",
+			"DataSourceASCIIDelimiter = ',';",
+			"DataSourceNameForServer =  ${1:sFileName};"
+		]
+	},
+
+	"Set ODBC Datasource": {
+		"prefix": "xSet ODBC Datasource",
+		"description": "Set an ODBC as a process data source",
+		"body": [
+			"# --- Set the Data Source",
+			"DataSourceType = 'ODBC';",
+			"DataSourceNameForServer =  ${1:sODBCName}",
+			"DataSourceUserName =  ${2:sUserName};",
+			"DatasourcePassword =  ${3:sPassword};",
+			"DatasourceQuery =  ${4:sQuery};"
+		]
+	},
+
+	"Set Subset Datasource": {
+		"prefix": "xSet Subset Datasource",
+		"description": "Set a Subset as a process data source",
+		"body": [
+			"# --- Set the Data Source",
+			"DataSourceType = 'Subset';",
+			"DataSourceNameForServer =  ${1:sSourceDimName};",
+			"DatasourceDimensionSubset =  ${2:sSubsetName};"
+		]
+	}
+}
