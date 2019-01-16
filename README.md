@@ -9,7 +9,7 @@ TM1 Syntax Highlighting and Snippets extension is a set of syntax highlighting f
 ### About CarpeDatum
 [CarpeDatum](https://www.CarpeDatumInc.com) provides planning and analytics consulting and product development services for IBM, Microsoft, Tableau, and Qlik since 1997.   Our highly skilled consultants have years of *real-world* experience in financial analysis, business intelligence, performance management and information systems.  We apply this unique blend of knowledge and skill to deliver powerful value-added applications to help organizations achieve strategic and tactical goals. 
 
-### Our product offerings include:
+### Check out other TM1 products:
 * [TM1Compare](http://www.TM1Compare.com) for rapidly analyzing differences in a multi server environment and migrating those changes between servers
 * [TM1Connect](http://www.TM1Connect.com) enables direct live ODBC access to TM1 cube data from standard relationally aware tools such as Tableau, Qlik, PowerBI, MicroStrategy, etc.
 
@@ -101,7 +101,7 @@ Several standardized comment blocks are provided:
 * `xMedium Code Block` snippet introduces minor breakouts of a Turbo Integrator or rule block within a major section.
 
 
-## <a id="cdc-snippets">CarpeDatum Library Snippets</a>
+## <a name="user-content-cdc-snippets" id="cdc-snippets">CarpeDatum Library Snippets</a>
 
 CarpeDatum snippets provide code snippets for CarpeDatum customers leveraging our standard script library.   It works much in the same as standard snippets except these are not part of the standard TM1 functions or operations.
 
@@ -110,7 +110,7 @@ You can disable these from the snippet lookup by removing the entry in the packa
 ![CarpeDatum Snippets](about/images/carpedatum-snippet-config.png)
 
 
-## <a id="custom-snippets">Custom Snippets</a>
+## <a name="user-content-custom-snippets" id="custom-snippets">Custom Snippets</a>
 
 We have provided a reference for your own custom Turbo Integrator code snippets by simply creating a file named `custom.process.codeblocks.json` in this extensions directory.    
 
