@@ -1,19 +1,6 @@
 {
     "$schema": "vscode://schemas/color-theme",
     "name": "CDCDark",
-    "settings": [{
-        "uuid": "D039AEA9-9DD2-4237-A963-E84494B0B3FB",
-        "colorSpaceName": "sRGB",
-        "semanticClass": "theme.dark.CDCDark",
-        "settings": {
-            "background": "#151515",
-            "caret": "#FFFF00",
-            "foreground": "#EDEDED",
-            "invisibles": "#CAE2FB3D",
-            "lineHighlight": "#202325",
-            "selection": "#515559"
-        }
-    }],
     "tokenColors": [{
         "name": "Comment",
         "scope": "comment",
