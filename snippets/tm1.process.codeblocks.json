@@ -1,5 +1,5 @@
 {
-	"Header": {
+	"Header Code Block": {
 		"prefix": "xHeader",
 		"body": [
 			"#==============================================================================",
@@ -26,17 +26,20 @@
 			"#==============================================================================",
 			"#                           CONFIGURATION SECTION",
 			"#==============================================================================",
-			"cProcessName = GetProcessName();",
-			"cTimeStamp = TIMST( NOW, '\\Y-\\m-\\d(\\h\\i\\s)' );",
-			"cViewName = '_tmp_' | cProcessName | '_' | cTimeStamp;",
-			"cSubsetName = cViewName;",
+			"sProcessName = GetProcessName();",
+			"sTimeStamp = TIMST( NOW, '\\Y-\\m-\\d(\\h\\i\\s)' );",
+			"sTempName = '_tmp_' | sProcessName | '_' | sTimeStamp;",
 			"",
 			"sLogPath = '..\\Logs\\';",
-			"sLogFile = sLogPath | cViewName | '.log';",
+			"sLogFile = sLogPath | sViewName | '.log';",
 			"",
 			"",
 			"#==============================================================================",
 			"#                        PARAMETER VALIDATION SECTION",
+			"#==============================================================================",
+			"",
+			"#==============================================================================",
+			"#                             JOB LOGGING SECTION",
 			"#==============================================================================",
 			"",
 			"#==============================================================================",
@@ -55,7 +58,7 @@
 		]
 	},
 
-	"Large Code Block Introduction": {
+	"Large Code Block ": {
 		"prefix": "xLarge Code Block",
 		"description": "",
 		"body": [
