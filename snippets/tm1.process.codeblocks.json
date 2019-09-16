@@ -31,7 +31,7 @@
 			"sTempName = '_tmp_' | sProcessName | '_' | sTimeStamp;",
 			"",
 			"sLogPath = '..\\Logs\\';",
-			"sLogFile = sLogPath | sViewName | '.log';",
+			"sLogFile = sLogPath | sTempName | '.log';",
 			"",
 			"",
 			"#==============================================================================",
@@ -109,13 +109,31 @@
 			"# --- Loop through the elements in the dimension",
 			"sDimName = ${1:DimensionName};",
 			"sParentElemID = ${2:ParentElementID};",
-			"nNumElems = ELCOMPN( sDimName, sParentElemID );",
+			"nNumElems = DIMSIZ( sDimName );",
 			"nElemIndex = 0;",
 			"While( nElemIndex < nNumElems );",
 			"    nElemIndex = nElemIndex + 1;",
-			"    sElemID = ELCOMP( sDimName, sParentElemID, nElemIndex );",
+			"    sElemID = DIMNM( sDimName, nElemIndex );",
 			"    ",
 			"    ${3:#...code...}",
+			"End;"
+		]
+	},
+
+	"Loop Dimension Elements Reverse": {
+		"prefix": "xLoop Dimension Elements",
+		"description": "Loop through all of the elements within a dimension. (not safe for element deletes)",
+		"body": [
+			"# --- Loop through the elements in the dimension",
+			"sDimName = ${1:DimensionName};",
+			"sParentElemID = ${2:ParentElementID};",
+			"nNumElems = DIMSIZ( sDimName );",
+			"While( nNumElems > 0 );",
+			"    sElemID = DIMNM( sDimName, nNumElems );",
+			"    ",
+			"    ${3:#...code...}",
+			"",
+			"    nNumElems = nNumElems - 1;",
 			"End;"
 		]
 	},
@@ -140,11 +158,29 @@
 		]
 	},
 
-	"Loop Dimension Elements Reverse": {
-		"prefix": "xLoop Dimension Elements Reverse",
-		"description": "Loop through all of the elements within a dimension in reverse order. (safe for element deletes)",
+	"Loop Child Elements": {
+		"prefix": "xLoop Child Elements",
+		"description": "Loop through all of the children within a parent element",
 		"body": [
-			"# --- Loop through the elements in the dimension",
+			"# --- Loop through the children of a parent element",
+			"sDimName = ${1:DimensionName};",
+			"sParentElemID = ${2:ParentElementID};",
+			"nNumElems = ELCOMPN( sDimName, sParentElemID );",
+			"While( nNumElems > 0 );",
+			"    sElemID = ELCOMP( sDimName, sParentElemID, nNumElems );",
+			"    ",
+			"    ${3:#...code...}",
+			"    ",
+			"    nNumElems = nNumElems - 1;",
+			"End;"
+		]
+	},
+
+	"Loop Child Elements Reverse": {
+		"prefix": "xLoop Child Elements Reverse",
+		"description": "Loop through all of the elements within a parent in reverse order. (safe for element deletes)",
+		"body": [
+			"# --- Loop through the children of a parent element in reverse order",
 			"sDimName = ${1:DimensionName};",
 			"sParentElemID = ${2:ParentElementID};",
 			"nNumElems = ELCOMPN( sDimName, sParentElemID );",
