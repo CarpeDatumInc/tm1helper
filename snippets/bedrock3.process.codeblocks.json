@@ -1,0 +1,9 @@
+{
+	"bedrock3_Refresh Security": {
+		"prefix": "bedrock3_Refresh Security",
+		"description": "Executes the Bedrock.Security.Refresh process",
+		"body": [
+			"ExecuteProcess( 'Bedrock.Security.Refresh');"
+		]
+	}
+}
