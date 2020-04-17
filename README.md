@@ -13,6 +13,11 @@ TM1 Syntax Highlighting and Snippets extension is a set of syntax highlighting f
 * [TM1Compare](http://www.TM1Compare.com) for rapidly analyzing differences in a multi server environment and migrating those changes between servers
 * [TM1Connect](http://www.TM1Connect.com) enables direct live ODBC access to TM1 cube data from standard relationally aware tools such as Tableau, Qlik, PowerBI, MicroStrategy, etc.
 
+## Release 1.0.2
+
+* Updated all rule and process functions to include the full set of Planning Analytics functions.
+* Fixed a compatibility issue with the CDC Dark theme in the new versions of VSCode
+* Moved Set View Datasource to generic TM1 Process Codeblocks   (thanks A. Sutcliffe!)
 
 ## Features
 
@@ -87,10 +92,14 @@ All variable names are consistent throughout rules and Turbo Integrator function
 
 * `p = Parameter`: Variables defined on the Parameters tab should be prefixed with a “p”.
 * `v = Variables`: Variables defined on the Variables tab should be prefixed with a “v”.
-* `c = Constant`: Variables that are set up once and never change their value should be prefixed with a “c”.
+* `c = Character`: Variables that contain a single character should be prefixed with a “c”.
 * `n = Numeric`: Variables that contain numeric values should be prefixed with an “n”.
 * `s = String`: Variables that contain string values should be prefixed with an “s”.
 * `b = Boolean`: Variables that are Boolean (1 or 0) should be prefixed with a “b”.
+
+** Special Note **
+There are a number of TI and Rule functions which use the boolean indicator inconsistenly.   Some use a numeric 1 or 0 and others use a string '1' or '0'.   Where the function requires a numeric boolean value, the `b` prefix will be used.   For those few string boolean values, TM1Helper will use the convention of 'sFlag'.
+
 
 ### Commenting
 

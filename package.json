@@ -2,7 +2,7 @@
 	"name": "tm1-helper",
 	"displayName": "TM1 Helper",
 	"description": "TM1 Rule and Process Coding Extension",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"publisher": "CarpeDatum",
 	"repository": { "url": "https://github.com/CarpeDatumInc/vscode-tm1.git" },
 	"icon": "about/images/tm1-helper-icon.png",
