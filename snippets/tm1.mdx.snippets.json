@@ -53,7 +53,7 @@
     "Filter By Attribute":{
         "prefix":"mdxFilter By Attribute", 
         "body":[
-            "Filter( ${1:Expression} ), [${2:DimName}].[${3:AttrName}] = '${4:Value}' )"
+            "Filter( ${1:Expression}, [${2:DimName}].[${3:AttrName}] = '${4:Value}' )"
         ]
     },
 
