@@ -153,16 +153,5 @@
 			"    , 'pIncludeConsolidated', '${4:}'",
 			");"
 		]
-	},
-
-	"Set View Datasource": {
-		"prefix": "xSet View Datasource",
-		"description": "Set a TM1 cube view as a process data source",
-		"body": [
-			"# --- Set the Data Source",
-			"DataSourceType = 'View';",
-			"DataSourceNameForServer =  ${1:cSourceCubeName};",
-			"DataSourceCubeView =  ${2:cViewName};"
-		]
 	}
 }
