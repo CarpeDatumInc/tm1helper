@@ -29,7 +29,7 @@
 		{"name": "constant.numeric.floating-point.tm1rule", "match": "(\\.\\d+([Ee][-+]\\d+)?i?)\\b|\\b\\d+\\.\\d*(([Ee][-+]\\d+)?i?\\b)?"},
 		{"name": "constant.numeric.integer.tm1rule", "match": "\\b((0x[0-9a-fA-F]+)|(0[0-7]+i?)|(\\d+([Ee]\\d+)?i?)|(\\d+[Ee][-+]\\d+i?))\\b"},
 
-        {"name": "entity.reference.dimension.tm1rule", "match": "(![^,)]\\w)"},
+        {"name": "entity.reference.dimension.tm1rule", "match": "(![^,)]*\\w)"},
 
         {
             "name": "string.quoted.single.tm1",

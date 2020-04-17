@@ -164,5 +164,22 @@
 			"DataSourceNameForServer =  ${1:cSourceCubeName};",
 			"DataSourceCubeView =  ${2:cViewName};"
 		]
+	},
+
+	"Job Control": {
+		"prefix": "xJob Control",
+		"description": "Add job control section to prolog",
+		"body": [
+			"#==============================================================================",
+			"#                            JOB CONTROL SECTION",
+			"#==============================================================================",
+			"",
+			"If( CubeExists('sys_Job Status') );",
+			"Else;",
+			"    LogOutput( 'INFO', Expand( 'sProcessName: %pParam1%, %pParam2%' ) );",
+			"EndIf;",
+			""
+		]
 	}
+
 }
