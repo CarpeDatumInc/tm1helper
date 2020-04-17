@@ -97,9 +97,7 @@ All variable names are consistent throughout rules and Turbo Integrator function
 * `s = String`: Variables that contain string values should be prefixed with an “s”.
 * `b = Boolean`: Variables that are Boolean (1 or 0) should be prefixed with a “b”.
 
-** Special Note **
-There are a number of TI and Rule functions which use the boolean indicator inconsistenly.   Some use a numeric 1 or 0 and others use a string '1' or '0'.   Where the function requires a numeric boolean value, the `b` prefix will be used.   For those few string boolean values, TM1Helper will use the convention of 'sFlag'.
-
+> NOTE: There are a number of TI and Rule functions which use the boolean indicator inconsistenly.   Some use a numeric 1 or 0 and others use a string '1' or > '0'.   Where the function requires a numeric boolean value, the `b` prefix will be used.   For those few string boolean values, TM1Helper will use the > convention of 'sFlag'.
 
 ### Commenting
 
