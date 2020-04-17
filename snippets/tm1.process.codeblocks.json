@@ -28,7 +28,11 @@
 			"#==============================================================================",
 			"sProcessName = GetProcessName();",
 			"sTimeStamp = TIMST( NOW, '\\Y-\\m-\\d(\\h\\i\\s)' );",
+<<<<<<< HEAD
 			"sTempName = Expand( '_tmp_%sProcessName%_%sTimeStamp% ') | NumbertoString(RAND());",
+=======
+			"sTempName = '_tmp_' | sProcessName | '_' | sTimeStamp;",
+>>>>>>> 6cb98c78f8bdd4463f8c70167342804b9738ccd9
 			"",
 			"sLogPath = '..\\Logs\\';",
 			"sLogFile = sLogPath | sTempName | '.log';",
@@ -37,6 +41,10 @@
 			"",
 			"#==============================================================================",
 			"#                        PARAMETER VALIDATION SECTION",
+			"#==============================================================================",
+			"",
+			"#==============================================================================",
+			"#                             JOB LOGGING SECTION",
 			"#==============================================================================",
 			"",
 			"#==============================================================================",
@@ -223,6 +231,17 @@
 			"DataSourceType = 'Subset';",
 			"DataSourceNameForServer =  ${1:sSourceDimName};",
 			"DatasourceDimensionSubset =  ${2:sSubsetName};"
+		]
+	},
+
+	"Set View Datasource": {
+		"prefix": "xSet View Datasource",
+		"description": "Set a TM1 cube view as a process data source",
+		"body": [
+			"# --- Set the Data Source",
+			"DataSourceType = 'View';",
+			"DataSourceNameForServer =  ${1:cSourceCubeName};",
+			"DataSourceCubeView =  ${2:cViewName};"
 		]
 	}
 }

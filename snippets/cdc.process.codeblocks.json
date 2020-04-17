@@ -155,17 +155,6 @@
 		]
 	},
 
-	"Set View Datasource": {
-		"prefix": "xSet View Datasource",
-		"description": "Set a TM1 cube view as a process data source",
-		"body": [
-			"# --- Set the Data Source",
-			"DataSourceType = 'View';",
-			"DataSourceNameForServer =  ${1:cSourceCubeName};",
-			"DataSourceCubeView =  ${2:cViewName};"
-		]
-	},
-
 	"Job Control": {
 		"prefix": "xJob Control",
 		"description": "Add job control section to prolog",
@@ -179,7 +168,6 @@
 			"    LogOutput( 'INFO', Expand( 'sProcessName: %pParam1%, %pParam2%' ) );",
 			"EndIf;",
 			""
-		]
+		]	
 	}
-
 }

@@ -4,45 +4,94 @@
 	"description": "TM1 Rule and Process Coding Extension",
 	"version": "1.0.2",
 	"publisher": "CarpeDatum",
-	"repository": { "url": "https://github.com/CarpeDatumInc/vscode-tm1.git" },
+	"repository": {
+		"url": "https://github.com/CarpeDatumInc/vscode-tm1.git"
+	},
 	"icon": "about/images/tm1-helper-icon.png",
 	"engines": {
 		"vscode": "^1.19.0"
 	},
-	"categories": [ "Programming Languages" ],
+	"categories": [
+		"Programming Languages"
+	],
 	"contributes": {
 		"languages": [
 			{
 				"id": "tm1rule",
-				"aliases": [ "TM1 Rule", "tm1 rule" ],
-				"extensions": [ ".rux" ],
+				"aliases": [
+					"TM1 Rule",
+					"tm1 rule"
+				],
+				"extensions": [
+					".rux"
+				],
 				"configuration": "./language-configuration.json"
 			},
 			{
 				"id": "tm1process",
-				"aliases": [ "TM1 Process", "tm1 process" ],
-				"extensions": [ ".pro" ],
+				"aliases": [
+					"TM1 Process",
+					"tm1 process"
+				],
+				"extensions": [
+					".pro"
+				],
 				"configuration": "./language-configuration.json"
 			}
 		],
 		"grammars": [
-			{ "language": "tm1rule", "scopeName": "source.tm1rule", "path": "./syntaxes/tm1.rule.syntax.json" },
-			{ "language": "tm1process", "scopeName": "source.tm1process", "path": "./syntaxes/tm1.process.syntax.json" }
+			{
+				"language": "tm1rule",
+				"scopeName": "source.tm1rule",
+				"path": "./syntaxes/tm1.rule.syntax.json"
+			},
+			{
+				"language": "tm1process",
+				"scopeName": "source.tm1process",
+				"path": "./syntaxes/tm1.process.syntax.json"
+			}
 		],
 		"snippets": [
-			{ "language": "tm1process", "path": "./snippets/custom.rule.codeblocks.json" },
-			{ "language": "tm1process", "path": "./snippets/custom.process.codeblocks.json" },
-
-			{ "language": "tm1process", "path": "./snippets/cdc.process.codeblocks.json" },
-			{ "language": "tm1rule", "path": "./snippets/cdc.rule.codeblocks.json" },
-
-			{ "language": "tm1rule", "path": "./snippets/tm1.rule.snippets.json" },
-			{ "language": "tm1rule", "path": "./snippets/tm1.rule.codeblocks.json" },
-			{ "language": "tm1rule", "path": "./snippets/tm1.mdx.snippets.json" },
-
-			{ "language": "tm1process", "path": "./snippets/tm1.process.snippets.json" },
-			{ "language": "tm1process", "path": "./snippets/tm1.process.codeblocks.json" },
-			{ "language": "tm1process", "path": "./snippets/tm1.mdx.snippets.json" }
+			{
+				"language": "tm1process",
+				"path": "./snippets/custom.rule.codeblocks.json"
+			},
+			{
+				"language": "tm1process",
+				"path": "./snippets/custom.process.codeblocks.json"
+			},
+			{
+				"language": "tm1process",
+				"path": "./snippets/cdc.process.codeblocks.json"
+			},
+			{
+				"language": "tm1rule",
+				"path": "./snippets/cdc.rule.codeblocks.json"
+			},
+			{
+				"language": "tm1rule",
+				"path": "./snippets/tm1.rule.snippets.json"
+			},
+			{
+				"language": "tm1rule",
+				"path": "./snippets/tm1.rule.codeblocks.json"
+			},
+			{
+				"language": "tm1rule",
+				"path": "./snippets/tm1.mdx.snippets.json"
+			},
+			{
+				"language": "tm1process",
+				"path": "./snippets/tm1.process.snippets.json"
+			},
+			{
+				"language": "tm1process",
+				"path": "./snippets/tm1.process.codeblocks.json"
+			},
+			{
+				"language": "tm1process",
+				"path": "./snippets/tm1.mdx.snippets.json"
+			}
 		],
 		"themes": [
 			{
@@ -51,5 +100,10 @@
 				"path": "./themes/CDCDark.theme.json"
 			}
 		]
+	},
+	"__metadata": {
+		"id": "259ca666-f4aa-4c35-90ee-1d604f7be888",
+		"publisherDisplayName": "CarpeDatum Consulting Inc",
+		"publisherId": "bfa8ca9b-9fd1-4ee8-a3bf-71b921b57cb6"
 	}
 }
