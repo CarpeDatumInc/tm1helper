@@ -12,20 +12,20 @@
 			"#   # = Only elements at level # are included in subset (i.e. #0 for Level 0)",
 			"#   & = Use the supplied MDX to create the subset",
 			"nReturnCode = ",
-			"ExecuteProcess( 'sys_Create View'",
-			"    , 'pCubeName', ${1:sCubeName}",
-			"    , 'pViewName', ${2:sViewName}",
-			"    , 'pStaticSubsets', 1",
-			"    , 'pElement1', '${3:#0}'",
-			"    , 'pElement2', '${4:#0}'",
-			"    , 'pElement3', '${5:#0}'",
-			"    , 'pElement4', '${6:#0}'",
-			"    , 'pElement5', '${7:#0}'",
-			"    , 'pElement6', '${8:#0}'",
-			"    , 'pElement7', '${9:#0}' ",
-			"    , 'pElement8', '${10:#0}'",
-			"    , 'pElement9', '${11:#0}'",
-			"    , 'pElement10', '${12:#0}'",
+			"    ExecuteProcess( 'sys_Create View',",
+			"        'pCubeName', ${1:sCubeName},",
+			"        'pViewName', ${2:sViewName},",
+			"        'pUseTempObjects', 1,",
+			"        'pElement1', '${3:#0}',",
+			"        'pElement2', '${4:#0}',",
+			"        'pElement3', '${5:#0}',",
+			"        'pElement4', '${6:#0}',",
+			"        'pElement5', '${7:#0}',",
+			"        'pElement6', '${8:#0}',",
+			"        'pElement7', '${9:#0}',",
+			"        'pElement8', '${10:#0}',",
+			"        'pElement9', '${11:#0}',",
+			"        'pElement10', '${12:#0}'",
 			");",
 			"",
 			"# ---- Make sure the view was created ok",
@@ -40,7 +40,6 @@
 			"ViewExtractSkipRuleValuesSet( sCubeName, sViewName, 0 );"
 		]
 	},
-
 	"sys_Clear Version": {
 		"prefix": "xsys_Clear Version",
 		"description": "Executes the sys_Clear Version process to clear a Scenario",
@@ -56,7 +55,6 @@
 			");"
 		]
 	},
-
 	"sys_Copy Version": {
 		"prefix": "xsys_Copy Version",
 		"description": "Executes the sys_Copy Version process",
@@ -74,13 +72,13 @@
 			");"
 		]
 	},
-
 	"sys_Delete View": {
 		"prefix": "xsys_Delete View",
 		"description": "Executes the sys_Delete View process",
-		"body": [ "ExecuteProcess( 'sys_Delete View', 'pCubeName', ${1:sCubeName}, 'pViewName', ${2:sViewName} );" ]
+		"body": [
+			"ExecuteProcess( 'sys_Delete View', 'pCubeName', ${1:sCubeName}, 'pViewName', ${2:sViewName} );"
+		]
 	},
-
 	"sys_Export Data": {
 		"prefix": "xsys_Export Data",
 		"description": "Executes the sys_Export Data process. Be sure to specify the full file path with the name.",
@@ -88,7 +86,6 @@
 			"ExecuteProcess( 'sys_Export Data', 'pFileName', ${1:sFileName}, 'pCubeName', ${2:sCubeName}, 'pViewName', ${3:sViewName} );"
 		]
 	},
-
 	"sys_Import Data": {
 		"prefix": "xsys_Import Data",
 		"description": "Executes the sys_Import Data process. Be sure to specify the full file path with the name.",
@@ -96,7 +93,6 @@
 			"ExecuteProcess( 'sys_Import Data', 'pFileName', ${1:sFileName}, 'pCubeName', ${2:sCubeName}, 'pClearView', ${3:sViewName}, 'pAdditive', ${4:1} );"
 		]
 	},
-
 	"sys_Export Version": {
 		"prefix": "xsys_Export Version",
 		"description": "Executes the sys_Export Version process",
@@ -112,7 +108,6 @@
 			");"
 		]
 	},
-
 	"sys_Clone Dimension": {
 		"prefix": "xsys_Clone Dimension",
 		"description": "Executes the sys_Clone Dimension process",
@@ -126,7 +121,6 @@
 			");"
 		]
 	},
-
 	"sys_Import Version": {
 		"prefix": "xsys_Import Version",
 		"description": "Executes the sys_Import Version process",
@@ -141,7 +135,6 @@
 			");"
 		]
 	},
-
 	"sys_Remove Dimension Structure": {
 		"prefix": "xsys_Remove Dimension Structure",
 		"description": "Executes the sys_Remove Dimension Structure process",
@@ -154,7 +147,6 @@
 			");"
 		]
 	},
-
 	"Job Control": {
 		"prefix": "xJob Control",
 		"description": "Add job control section to prolog",
@@ -168,6 +160,82 @@
 			"    LogOutput( 'INFO', Expand( 'sProcessName: %pParam1%, %pParam2%' ) );",
 			"EndIf;",
 			""
-		]	
+		]
+	},
+	"Cube to Cube": {
+		"prefix": "xCube to Cube Transfer",
+		"description": "Setup cube to cube data processing",
+		"body": [
+			"#------------------------------------------------------------------------------",
+			"#  Setup cube to cube data transfer",
+			"#------------------------------------------------------------------------------",
+			"sSourceCubeName = ${1:sSourceCubeName};",
+			"sDestCubeName = ${1:sDestCubeName};",
+			"sSourceViewName = sTempName | ' - Source';",
+			"sDestViewName = sTempName | ' - Dest';",
+			"",
+			"#------------------------------------------------------------------------------",
+			"#  Create the source view",
+			"#------------------------------------------------------------------------------",
+			"nReturnCode = ",
+			"    ExecuteProcess( 'sys_View - Create'",
+			"        ,'pCubeName', sSourceCubeName",
+			"        ,'pViewName', sSourceViewName",
+			"        ,'pUseTempObjects', 1",
+			"        ,'pElement1', '${3:#0}'",
+			"        ,'pElement2', '${4:#0}'",
+			"        ,'pElement3', '${5:#0}'",
+			"        ,'pElement4', '${6:#0}'",
+			"        ,'pElement5', '${7:#0}'",
+			"        ,'pElement6', '${8:#0}'",
+			"        ,'pElement7', '${9:#0}' ",
+			"        ,'pElement8', '${10:#0}'",
+			"        ,'pElement9', '${11:#0}'",
+			"        ,'pElement10', '${12:#0}'",
+			");",
+			"",
+			"# ---- Make sure the view was created ok",
+			"IF( nReturnCode <> ProcessExitNormal() );",
+			"   LogOutput( 'ERROR', 'sys_Create View did not complete successfullly' );",
+			"   ProcessError;",
+			"ENDIF;",
+			"",
+			"# --- Set the view properties",
+			"ViewExtractSkipCalcsSet( sSourceCubeName, sSourceViewName, 1 );",
+			"ViewExtractSkipZeroesSet( sSourceCubeName, sSourceViewName, 1 );",
+			"ViewExtractSkipRuleValuesSet( sSourceCubeName, sSourceViewName, 0 );",
+			"",
+			"# --- Set the datasource properties",
+			"DataSourceType          = 'View';",
+			"DataSourceNameForServer = vSourceCubeName;",
+			"DataSourceCubeView      = vSourceViewName;",
+			"",
+			"",
+			"#------------------------------------------------------------------------------",
+			"#  Clear the destination view",
+			"#------------------------------------------------------------------------------",
+			"nReturnCode = ",
+			"    ExecuteProcess( 'sys_View - Clear',",
+			"        'pCubeName', sDestCubeName,",
+			"        'pViewName', sDestViewName,",
+			"        'pElement1', '${13:#0}',",
+			"        'pElement2', '${14:#0}',",
+			"        'pElement3', '${15:#0}',",
+			"        'pElement4', '${16:#0}',",
+			"        'pElement5', '${17:#0}',",
+			"        'pElement6', '${18:#0}',",
+			"        'pElement7', '${19:#0}',",
+			"        'pElement8', '${20:#0}',",
+			"        'pElement9', '${21:#0}',",
+			"        'pElement10', '${22:#0}'",
+			");",
+			"",
+			"# ---- Make sure the view was created ok",
+			"IF( nReturnCode <> ProcessExitNormal() );",
+			"   LogOutput( 'ERROR', 'sys_Create View did not complete successfullly' );",
+			"   ProcessError;",
+			"ENDIF;",
+			""
+		]
 	}
 }
