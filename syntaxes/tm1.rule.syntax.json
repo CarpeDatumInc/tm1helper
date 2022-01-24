@@ -79,7 +79,7 @@
         },
         {
             "name": "entity.reference.dimension.tm1rule",
-            "match": "(![^,)]*\\w*)"
+            "match": "(![^,)=<>@ ]*\\w*)"
         },
         {
             "name": "string.quoted.single.tm1",
