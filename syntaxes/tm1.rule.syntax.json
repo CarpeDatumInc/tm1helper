@@ -10,35 +10,35 @@
     "patterns": [
         {
             "name": "keyword.attribute.tm1rule",
-            "match": "(?i)\\b(ATTRN|ATTRS|ElementAttrN|ElementAttrS)\\b(?=\\()"
+            "match": "(?i)\\b(ATTRN|ATTRS|ElementAttrN|ElementAttrS)\\b(?=\\s*\\()"
         },
         {
             "name": "keyword.consolidated.tm1rule",
-            "match": "(?i)\\b(ConsolidatedMin|ConsolidatedMax|ConsolidatedAvg|ConsolidatedCount|ConsolidatedCountUnique)\\b(?=\\()"
+            "match": "(?i)\\b(ConsolidatedMin|ConsolidatedMax|ConsolidatedAvg|ConsolidatedCount|ConsolidatedCountUnique)\\b(?=\\s*\\()"
         },
         {
             "name": "keyword.cube.tm1rule",
-            "match": "(?i)\\b(CellValueN|CellValueS|DB|ISLEAF|ISUNDEFINEDCELLVALUE|UNDEF|UNDEFINEDCELLVALUE|UNDEFVALS)\\b(?=\\()"
+            "match": "(?i)\\b(CellValueN|CellValueS|DB|ISLEAF|ISUNDEFINEDCELLVALUE|UNDEF|UNDEFINEDCELLVALUE|UNDEFVALS)\\b(?=\\s*\\()"
         },
         {
             "name": "keyword.datetime.tm1rule",
-            "match": "(?i)\\b(DATE|DATES|DAY|DAYNO|MONTH|NOW|TIME|TIMST|TIMVL|TODAY|YEAR)\\b(?=\\()"
+            "match": "(?i)\\b(DATE|DATES|DAY|DAYNO|MONTH|NOW|TIME|TIMST|TIMVL|TODAY|YEAR)\\b(?=\\s*\\()"
         },
         {
             "name": "keyword.dimension.tm1rule",
-            "match": "(?i)\\b(ConsolidateChildren|DIMNM|DIMSIZ|DNEXT|DNLEV|TABDIM)\\b(?=\\()"
+            "match": "(?i)\\b(ConsolidateChildren|DIMNM|DIMSIZ|DNEXT|DNLEV|TABDIM)\\b(?=\\s*\\()"
         },
         {
             "name": "keyword.element.tm1rule",
-            "match": "(?i)\\b(DIMIX|DTYPE|ELCOMP|ELCOMPN|ELISANC|ELISCOMP|ELISPAR|ELLEV|ELPAR|ELPARN|ELWEIGHT|ElementIndex|ElementName|ElementCount|ElementNext|LevelCount|ElementType|ElementComponent|ElementComponentCount|ElementIsAncestor|ElementIsComponent|ElementIsParent|ElementLevel|ElementParent|ElementParentCount|ElementWeight)\\b(?=\\()"
+            "match": "(?i)\\b(DIMIX|DTYPE|ELCOMP|ELCOMPN|ELISANC|ELISCOMP|ELISPAR|ELLEV|ELPAR|ELPARN|ELWEIGHT|ElementIndex|ElementName|ElementCount|ElementNext|LevelCount|ElementType|ElementComponent|ElementComponentCount|ElementIsAncestor|ElementIsComponent|ElementIsParent|ElementLevel|ElementParent|ElementParentCount|ElementWeight)\\b(?=\\s*\\()"
         },
         {
             "name": "keyword.financial.tm1rule",
-            "match": "(?i)\\b(FV|PAYMT|PV)\\b(?=\\()"
+            "match": "(?i)\\b(FV|PAYMT|PV)\\b(?=\\s*\\()"
         },
         {
             "name": "keyword.math.tm1rule",
-            "match": "(?i)\\b(ABS|ACOS|ASIN|ATAN|COS|EXP|INT|ISUND|LN|LOG|MAX|MIN|MOD|RAND|ROUND|ROUNDP|SIGN|SIN|SQRT|TAN)\\b(?=\\()"
+            "match": "(?i)\\b(ABS|ACOS|ASIN|ATAN|COS|EXP|INT|ISUND|LN|LOG|MAX|MIN|MOD|RAND|ROUND|ROUNDP|SIGN|SIN|SQRT|TAN)\\b(?=\\s*\\()"
         },
         {
             "name": "keyword.misc.tm1rule",
@@ -46,7 +46,7 @@
         },
         {
             "name": "keyword.text.tm1rule",
-            "match": "(?i)\\b(CAPIT|CHAR|CODE|DELET|FILL|INSRT|LONG|LOWER|NUMBR|SCAN|STR|SUBST|TRIM|UPPER)\\b(?=\\()"
+            "match": "(?i)\\b(CAPIT|CHAR|CODE|DELET|FILL|INSRT|LONG|LOWER|NUMBR|SCAN|STR|SUBST|TRIM|UPPER)\\b(?=\\s*\\()"
         },
         {
             "name": "section.control.tm1rule",
